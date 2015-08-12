@@ -1,0 +1,2724 @@
+/*Oswald 400 -- Weight 13KB*/
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+/*Oxygen 400 -- Weight 17KB*/
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+/* Reset */
+/**************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Global */
+/**************************/
+
+html {
+  height: 100%;
+	min-width: 320px; 
+	box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+}
+
+/* when primary navigation is visible, the content in the background won't scroll */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+article {
+  padding: 3% 0;
+}
+
+button:focus {
+  outline:0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, h3, h4, h5 h6, figcaption {
+  font-family:'Oswald', sans-serif; 
+}
+
+h2 {
+  font-size: 2.8vw;
+  margin-bottom: 1.5%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+
+p, li {
+  font-family: 'Oxygen', sans-serif;
+  line-height: 1.5em;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+p {
+  padding-bottom: 24px;
+  width: 50%; 
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+span.italics {
+  font-style: italic;
+}
+
+span.orange {
+  color: #E49B0B;
+}
+
+span.wide-p {
+  text-align: center;
+}
+
+span.bold {
+  font-weight: bold;
+}
+
+.home img {
+  width: 100px;
+  position: absolute;
+  top: 20%;
+  left: 1.7%;
+}
+
+#contentContainer h1 {
+  font-weight: 700;
+  font-size: 3vw;
+  padding: 3% 0%;
+  letter-spacing: 3.5px;
+  text-align: center;
+  margin: 0 auto;
+	text-transform: uppercase; 
+}
+
+#intro {
+  position: absolute;
+  top: 0;
+  text-align: right;
+  width: 100vw;
+  z-index: 1;
+}
+
+.title {
+  text-align: right;
+  padding-top: 40vh;
+  width: 45%;
+  text-transform: uppercase; 
+}
+
+#intro h1 {
+  font-family: 'Raleway', sans-serif;
+	font-size:5.5vw;
+  text-align: right; 
+  color: #fff;
+}
+
+#intro h2 {
+  font-family: 'Helvetica', sans-serif;
+  font-size:1.8vw;
+  font-weight: bold;
+  color: #D75800;
+  position: relative;
+  top: -20px;
+  text-align: right;
+  letter-spacing: .7px;
+}
+
+/* Page Fade In-Out Transition Animations */
+/******************************************/
+
+.animsition,
+.animsition-overlay {
+  position: relative;
+  opacity: 0;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation-name: fade-in;
+  -moz-animation-name: fade-in;
+  -o-animation-name: fade-in;
+  animation-name: fade-in;
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-out {
+  -webkit-animation-name: fade-out;
+  -moz-animation-name: fade-out;
+  -o-animation-name: fade-out;
+  animation-name: fade-out;
+}
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-o-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(500px);
+       transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+       transform: translateY(0);
+  }
+}
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(500px);
+         -o-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* scroll image */
+#intro img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 10vw;
+  width: 4%;
+  -webkit-animation: blink 3s ease infinite;
+  -moz-animation: blink 3s ease infinite;
+  -o-animation: blink 3s ease infinite;
+  animation: blink 3s ease infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {opacity : 1;}
+  50% {opacity: 0;}
+  100% {opacity : 1;}
+}
+
+@-moz-keyframes blink {
+  0% {opacity : 1;}
+  50% {opacity: 0;}
+  100% {opacity : 1;}
+}
+
+@keyframes blink {
+  0% {opacity : 1;}
+  50% {opacity: 0;}
+  100% {opacity : 1;}
+}
+
+
+/* Header and Navigation */
+/**************************/
+
+.parallax-one {
+  height: 100vh; 
+  overflow: hidden; 
+  position: relative; 
+  width: 100%; 
+  background: linear-gradient(rgba(1,8,13, 0.45), rgba(1,8,13, 0.45)), url(../images/background.jpg); 
+  background-attachment: fixed; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.cd-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header.cd-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 7;
+  height: 70px;   
+  background: transparent;
+  box-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header.cd-header.is-fixed {
+  /* when the user scrolls down, we hide the header right above the viewport */
+  position: fixed;
+  top: -70px;               /* originally -80px*/
+  background-color: rgba(45, 43, 43, 0.94);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+header.cd-header.is-visible {
+  /* if the user changes the scrolling direction, we show the header */
+  -webkit-transform: translate3d(0, 100%, 0);
+  -moz-transform: translate3d(0, 100%, 0);
+  -o-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);  
+}
+
+header .cd-primary-nav-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon {
+  /* this span is the central line of the menu icon */
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 45px;                                                                       
+  height: 5px;  
+  background-color: #fff;;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon::before, 
+header .cd-primary-nav-trigger .cd-menu-icon:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
+  -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
+  -o-transition: -moz-transform .3s, top .3s, background-color 0s;
+  transition: transform .3s, top .3s, background-color 0s;
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon::before {
+  top: -12px;                                                                   
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon::after {
+  top: 12px;                                                                            
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon.is-clicked {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before, .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+  background-color: white;
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
+  top: 0;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+header .cd-primary-nav-trigger .cd-menu-icon {
+  left: auto;
+  right: 70%;
+  top: 50%;
+  -webkit-transform: translateX(0) translateY(-50%);
+  -moz-transform: translateX(0) translateY(-50%);
+  -o-transform: translateX(0) translateY(-50%);
+  transform: translateX(0) translateY(-50%);
+}
+
+nav .cd-primary-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding:0;
+  background: rgba(45, 43, 43, 0.97);
+  z-index: 2;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: auto;
+  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+nav .cd-primary-nav li {
+  height: 25vh;
+  text-transform: capitalize;
+  font-family:'Oswald', sans-serif; 
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+nav .cd-primary-nav a {
+  font-size: 4vw;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);;
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav .cd-primary-nav a:hover {
+   color: #D75800;
+}
+
+nav .cd-primary-nav.is-visible {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* Section - Portfolio */
+/**************************/
+
+#portfolio  {
+	width: 100%;
+	background: url(../images/black-linen.png); 
+	background-repeat: repeat;
+  padding-top: 0%;
+  padding-bottom: 6%;
+}
+
+#portfolio h1 {
+	color: #fff;
+  letter-spacing: 4.5px;
+}
+
+.grid {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  min-width: 320px;
+  width: 33.333333333333%;
+  height: auto;
+  background: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.grid figure img {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.grid figure figcaption {
+  color: #fff;
+  text-shadow: 2px 4px 10px #000;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid figure figcaption > a {
+  z-index: 5;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.grid figure h3  {
+  display: block;
+  font-size: 1.4vw;
+  width: 100%;
+  font-family: 'Oxygen', sans-serif;
+  text-transform: lowercase;
+  position: absolute;
+  top: 53%;
+  text-shadow: 3px 4px 10px #000;
+}
+
+.grid figure h2,
+.grid figure p {
+  margin: 0;
+}
+
+.grid figure p {
+  font-family:'Oswald', sans-serif; 
+  letter-spacing: 3px;
+  font-size: 1.3vw;
+}
+
+figure.effect-apollo {
+  background: #322E2E;
+}
+
+figure.effect-apollo img {
+  opacity: 0.85;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo figcaption::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.6);
+  content: '';
+  -moz-transition: -webkit-transform 0.6s;
+  -o-transition: -webkit-transform 0.6s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+  transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 7%;
+  padding: 1.5%;
+  max-width: 330px;
+  border-right: 4px solid #fff;
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s;
+  -moz-transition: opacity 0.35s;
+  -o-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect-apollo h2 {
+  font-size: 3vw;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  position:absolute;
+  top: 40%;
+}
+
+figure.effect-apollo:hover img {
+  opacity: 0.4;
+  -webkit-transform: scale3d(1.35,1.3,1);
+  transform: scale3d(1.35,1.3,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+  -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+  transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* Section - About Me */
+/**************************/
+
+#about {
+  background: url(../images/aboutMe.png); 
+	background-repeat: repeat;
+  padding: 0;
+
+}
+
+#mobileH1 {
+  display: none;
+}
+
+#aboutImage img {
+  display: none;
+}
+
+#aboutImage {
+  width: 50%;
+  float: left;
+  background: url(../images/brentBio-01.jpg);
+  background-position: center; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover;
+}
+
+#aboutDescription {
+  width: 50%;
+  padding: 5% 0;
+  display: inline-block;
+  font-family: 'Oxygen', sans-serif;
+  line-height: 1.1em;
+  font-size: 1.1em; 
+  color: #444242;
+}
+
+#aboutDescription h1 {
+  margin: 0% 0 4% 0;
+  color: #262625;
+  letter-spacing: 4.5px;
+}
+
+.hr-about {
+  border: none;
+  height: 3px;
+  width: 20%;
+  color: #262625;
+  background: #262625;
+  margin: 0 auto;
+  margin-bottom: 3%;
+}
+
+#aboutDescription p {
+  width: 90%;
+  color: #262625;
+}
+
+/* Section - Contact */
+/**************************/
+#contact {
+  background: url(../images/black-linen.png); 
+  background-repeat: repeat;
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+#contact h1 {
+  font-size: 3vw;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  letter-spacing: 5px;
+  color:#fff;
+}
+
+#contact p {
+  padding-bottom: 3%;
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: .5px;
+  color: #fff;
+}
+
+#contact .social-media {
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+.social-media-icons {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  margin: 0 7%;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  -o-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+div.linkedIn {
+  background: url(../images/linkedIn.png) no-repeat center;
+  background-size: 50%;
+  border: 2.5px solid #fff;
+}
+
+a .linkedIn:hover {
+  background: url(../images/linkedIn-hover.png) no-repeat center;
+  background-size: 50%;
+  border: 2.5px solid #D75800;
+}
+
+div.goodreads {
+  background: url(../images/goodreads.png) no-repeat center;
+  background-size: 50%;
+  border: 2.5px solid #fff;
+}
+
+a .goodreads:hover {
+  background: url(../images/goodreads-hover.png) no-repeat center;
+  background-size: 50%;
+  border: 2.5px solid #D75800;
+}
+
+#contact-area {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#contact-area input, 
+#contact-area textarea {
+  padding: 2%;
+  font-family:'Oxygen', sans-serif; 
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+  color:#fff;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+  padding-bottom:1.4%;
+}
+
+#contact-area input:hover, 
+#contact-area textarea:hover {
+  color:#fff;
+  background-color:#504352;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#contact-area textarea {
+  height: 9em;
+  background-color:transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+}
+
+#contact-area textarea:focus, 
+#contact-area input:focus {
+  background-color:#333;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid transparent;
+}
+
+#contact-area input.submit-button {
+  margin-top: 2.5%;
+  font-family:'Oxygen', sans-serif;
+  font-size: 1.5em;
+  vertical-align: middle;
+  text-transform:uppercase;
+  width: 55%;
+  margin-left: 22.5%;
+  border: 1px solid #fff;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+#contact-area input.submit-button:hover {
+  color:#000;
+  background-color:#fff;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size:1em;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff; 
+  font-size:1em;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;
+  font-size:1em;
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+  font-size:14px;
+}
+
+#sent {
+  position: relative;
+  height: 50vh;
+}
+
+#thankYou {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+
+#thankYou h4 { 
+  font-size: 3vw;
+}
+
+footer {
+  background: url(../images/black-linen.png); 
+  background-repeat: repeat;
+  padding-bottom: 10vh;
+  position: relative;
+}
+
+footer h4 {
+  margin: 0;
+  font-family:'Oxygen', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 1vw;
+}
+
+/******************************************************/
+/* ---- Master Individual Portfolio Page Styling ---- */
+/******************************************************/
+
+#featureImage {
+  position: relative;
+  height: 50vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center
+}
+
+#featureTitle {
+  margin: 0;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+#featureTitle h1 {
+  font-size: 3.2vw;
+  width: 100%;
+  color: #fff;
+  padding: 3% 0%;
+  letter-spacing: 3.5px;
+  text-align: center;
+  margin-bottom: 4%;
+  text-transform: uppercase; 
+  text-shadow: 1px 1px 2px black; 
+  -webkit-animation-name: zoomIn;
+  -moz-animation-name: zoomIn;
+  -o-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1.7s;
+  -moz-animation-duration: 1.7s;
+  -o-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0.01);
+            transform: scale(0.01);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0.01);
+            transform: scale(0.01);
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+#featureTitle button {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  border: 2.5px solid #fff;
+  padding: 2% 3.5%;
+  background: rgba(255,255,255,.1);
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  text-transform: uppercase;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#featureTitle button:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+}
+
+.the-process p {
+  width: 100%; 
+}
+
+.the-process,
+.before-and-after,
+.responsibility,
+.the-assets,
+.reflections {
+ background: url(../images/chalkBoardBg.jpg);
+ background-position: top center; 
+ background-repeat: no-repeat;
+ background-size: cover; 
+ -o-background-size: cover; 
+ -moz-background-size: cover; 
+ -webkit-background-size: cover; 
+ background-repeat: no-repeat; 
+}
+
+.responsibility img {
+  display: block;
+  margin: 0 auto;
+  width: 35%;
+  margin-bottom: 3%;
+}
+
+.responsibility h2  {
+  margin-bottom: .5%;
+}
+
+.responsibility h3 {
+  text-align: center;
+  font-size: 1.4vw;
+  margin-bottom: 1%;
+}
+
+.the-process p,
+.responsibility p,
+.the-assets p,
+.reflections p {
+  color: #fff;
+  word-spacing: 1.5px;
+  letter-spacing: .5px; 
+}
+
+.before-and-after img {
+  width: 40%;
+  margin-top: 2%;
+}
+
+.before-and-after img:nth-child(2) {
+  margin: 0 6.666666666666667%;
+}
+
+/* Back to top arrow */
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(119, 126, 127, 0.9) url(../images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .9;
+}
+.no-touch .cd-top:hover {
+  background-color: #96C5CB;
+  opacity: 1;
+}
+
+/* local navigation arrows */ 
+
+#secondaryNav {
+  margin-top: 4%;
+  position: relative;
+}
+
+#local-nav {
+  width: 30%;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#local-nav h3 {
+  color: #fff;
+  font-size: 2vw;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+} 
+
+#secondaryNav p {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+  padding-top: 2%;
+  font-size: 1.1vw;
+  text-decoration: underline;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-top: .4rem solid #fff;
+  border-right: .4rem solid #fff;
+  box-shadow: 0 0 0 lightgray;
+  -webkit-transition: all 200ms ease;
+          transition: all 200ms ease;
+}
+.arrow.left {
+  left: 0;
+  -webkit-transform: translate3d(0, -50%, 0) rotate(-135deg);
+          transform: translate3d(0, -50%, 0) rotate(-135deg);
+}
+.arrow.right {
+  right: 0;
+  -webkit-transform: translate3d(0, -50%, 0) rotate(45deg);
+          transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+.arrow:hover {
+  border-top: .8rem solid #EF4A50;
+  border-right: .8rem solid #EF4A50;
+  box-shadow: .4rem -.4rem 0 black;
+}
+.arrow:hover.left {
+  left: -.2rem;
+}
+.arrow:hover.right {
+  right: -.2rem;
+}
+
+
+/* -------- Jason Cunningham Profile Page -------- */
+
+.cunninghamImage {
+  background: url(../images/jasonCunningham.jpg);
+  border-bottom: 7px solid #D75800;
+}
+
+.case-study-intro img {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.process-left,
+.process-right {
+  width: 40%;
+  display: inline-block;
+  float: left;
+}
+
+.process-left {
+  position: relative;
+}
+
+.process-left img {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.process-left {
+  margin: 0 6.66666667%;
+}
+
+.process-right h3 {
+  text-align: left;
+  font-size: 2vw;
+  margin: 4% 0 3.5% 0;
+  letter-spacing: 1.5px;
+  word-spacing: 1px;
+}
+
+.process-right ol {
+  list-style-type: upper-roman;
+  padding-left: 3%;
+}
+
+.process-right ol li {
+  color: #fff;
+  margin-bottom: 4%;
+}
+
+.the-solution {
+  position: relative;
+}
+
+.jason-solution {
+  margin-top: 3%;
+}
+
+.the-solution img {
+  display: block;
+  width: 60%;
+  margin: 1% auto;
+}
+
+.js-left,
+.js-right {
+  width: 40%;
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+
+.js-left {
+  margin-left: 20%;
+}
+
+.js-right {
+  width: 20%
+}
+
+
+.js-left img {
+  width: 90%;
+}
+
+.js-right img {
+  width: 80.5%;
+}
+
+.js-left img,
+.js-right img {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+/* -------- Bread of New Life Profile Page -------- */
+
+.bnlm-image {
+  background: url(../images/bread-of-new-life.jpg);
+  border-bottom: 7px solid #EF4A50;
+}
+
+.bnlm-flow { 
+  clear: both;
+  width: 86.5%;
+  margin: 0 auto;
+  padding-bottom: 3%;
+}
+
+.bnlm-flow figure {
+  display: inline-block;
+  width: 30%; 
+  margin: 0 1.66666666667%;
+  float: left;
+}
+
+.bnlm-flow figure img,
+.iterative-design-gallery figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+.bnlm-flow figure figcaption,
+.iterative-design-gallery figure figcaption {
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  margin-top: 2%;
+}
+
+hr.bnlm-hr {
+  clear: both;
+  border: 0;
+  height: 2px;
+  width: 70%;
+  margin-top: 30%;
+  margin-bottom: 5%;
+  background-image: -webkit-linear-gradient(left, rgba(239, 74, 80, 0), rgba(228, 155, 11, 1), rgba(239, 74, 80, 0));
+  background-image: -moz-linear-gradient(left, rgba(239, 74, 80, 0), rgba(228, 155, 11, 1), rgba(239, 74, 80, 0));
+  background-image: -o-linear-gradient(left, rgba(239, 74, 80, 0), rgba(228, 155, 11, 1), rgba(239, 74, 80, 0));
+  background-image: linear-gradient(left, rgba(239, 74, 80, 0), rgba(228, 155, 11, 1), rgba(239, 74, 80, 0));
+}
+
+.iterative-design {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.iterative-design-gallery {
+  margin-top: 3%;
+}
+
+.iterative-design-gallery figure {
+  vertical-align: top;
+  width: 22%;
+  margin: 0 1.5%;
+  float: left;
+}
+
+.iterative-design-gallery figure figcaption {
+  color: #000;
+  margin-bottom: 5%;
+}
+
+/* -------- Regis Hotel Profile Page -------- */
+
+.regisHotel-image {
+  background: url(../images/hotel-regis.jpg);
+  border-bottom: 7px solid #D75800;
+}
+
+img.regis-parallax  {
+  margin-top: 4%;
+}
+
+/* -------- African Safari -------- */
+
+.africanSafari {
+  background: url(../images/african-safari.jpg);
+  border-bottom: 7px solid #733A12;
+}
+
+/* -------- Dr. He Spa -------- */
+.drHeSpa {
+  background: url(../images/dr-he-spa-banner.jpg);
+  border-bottom: 7px solid #613078;
+}
+
+.specifications img {
+  width: 45%; 
+  margin-left: 27.5%;
+}
+
+.the-assets img {
+  width: 50%;
+  margin: 4% 25%;
+}
+
+.the-assets > img:nth-child(5) {
+  width: 70%;
+  margin-left: 15%;
+}
+
+/* -------- Dr. He Spa -------- */
+.cictanBiotech {
+  background: url(../images/cictan-biotech-banner.jpg);
+  border-bottom: 7px solid #0C7538;
+}
+
+.the-assets img {
+  width: 70%;
+  margin: 4% 15%;
+}
+
+.impact figure{
+  width: 46%;
+  float: left;
+  padding-top: 3%;
+  margin-left: 2.66666666667%;
+}
+
+.impact figcaption {
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+  margin-top: 2%;
+}
+
+
+/*--------------------------------------------------------------------------               -----------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------- Media Queries -----------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------               -----------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1385px) {
+
+#aboutDescription p {
+  font-size: 1em;
+}
+
+#featureTitle h1 {
+  font-size: 4.5vw;
+}
+
+#featureTitle button {
+  width: 45%;
+  font-size: 1.5vw;
+}
+
+.cd-primary-nav a {
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 4vw;
+}
+
+.process-left {
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+.process-left img {
+  margin-left: 25%;
+  margin-top: 3%;
+  width: 50%;
+  position: static;
+  -webkit-transform: none; 
+  -moz-transform: none; 
+  -ms-transform: none; 
+  -o-transform: none; 
+  transform: none;
+}
+
+.process-right {
+  width: 50%;
+  display: block;
+  float: none;
+  margin: 0 auto;
+}
+
+.process-right p {
+  width: 100%;
+} 
+
+.process-right h3 {
+  font-size: 3.2vw;
+}
+
+hr.bnlm-hr {
+  margin-top: 3%;
+}
+
+/*------ CICTAN-BIOTECH ------ */
+.responsibility h3 {
+  font-size: 1.7vw;
+}
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-header {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+
+.parallax-one {
+  background-attachment: scroll; 
+}
+
+.cd-primary-nav-trigger .cd-menu-icon {
+ right: 50%;
+}
+
+.title {
+  width: 55%;
+  padding-top: 40vh;
+}
+
+#intro h1 {
+  font-size:6.2vw;
+}
+
+#intro h2 {
+  font-size:2.2vw;
+  top: -15px;
+}
+
+#intro img {
+  margin-top: 18vw;
+}
+
+#portfolio h1,
+#about h1,
+#contact h1  {
+  font-size: 4vw;
+}
+
+#portfolioContainer > .grid h2 {
+  font-size: 3.5vw;
+}
+
+#portfolioContainer > .grid h3 {
+  font-size: 2vw;
+}
+
+#about h1 {
+  margin-bottom: 8%;
+}
+
+#aboutDescription p {
+  font-size: .9em;
+}
+
+.cd-top {
+  display: none;
+}
+
+#contact p {
+  padding-bottom: 3%;
+  width: 70%;
+}
+
+.social-media-icons {
+  height: 50px;
+  width: 50px;
+}
+
+#contact-area {
+  width: 80%;
+}
+
+#contact-area input, #contact-area textarea,
+#contact-area input.submit-button {
+  font-size: 1.1em;
+}
+
+footer h4 {
+  font-size: 1.4vw;
+  letter-spacing: 2px;
+}
+
+.process-right h3 {
+  font-size: 3vw;
+}
+
+.before-and-after img {
+  width: 47%;
+}
+
+.before-and-after img:nth-child(2) {
+  margin: 0 2%;
+}
+
+#local-nav {
+  width: 44%;
+}
+
+#secondaryNav p {
+font-size: 1.7vw;
+}
+
+#local-nav h3 {
+  font-size: 3vw;
+} 
+
+.arrow {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+.bnlm-flow figure figcaption,
+.iterative-design-gallery figure figcaption,
+.impact figcaption {
+  font-size: 1em;
+}
+
+img.regis-parallax {
+  width: 70%;
+}
+
+/*------ CICTAN-BIOTECH ------ */
+.responsibility h3 {
+  font-size: 2.1vw;
+}
+
+.responsibility img {
+  width: 40%;
+  margin-top: 2%;
+}
+
+.specifications img {
+  width: 56%;
+  margin-left: 22%;
+}
+
+/*------ Dr. He Spa ------ */
+
+.the-assets img.drHe-wire-frames {
+  width: 85%;
+  margin-left: 8.5%;
+}
+
+}
+
+@media only screen and (max-width: 960px) {
+
+.parallax-one {
+  background-attachment: scroll; 
+}
+
+nav .cd-primary-nav a {
+  font-size: 6vw;
+}
+
+.title {
+  width: 60%;
+  padding-top: 40vh;
+}
+
+#intro h1 {
+  font-size: 7vw;
+}
+
+#intro h2 {
+  font-size:2.8vw;
+  top: -18.5px;
+}
+
+#intro img {
+  margin-top: 30vw;
+  width: 6%;
+}
+
+#portfolio {
+padding-bottom: 0%;
+}
+
+#portfolio h1,
+#about h1,
+#contact h1  {
+  font-size: 5.5vw;
+}
+
+#portfolioContainer .grid figure {
+  width: 50%;
+}
+
+#portfolioContainer > .grid h2 {
+  font-size: 5vw;
+}
+
+#portfolioContainer > .grid h3 {
+  font-size: 2.8vw;
+}
+
+#about {
+  padding-top: 0;
+}
+
+#mobileH1 {
+  display: block;
+  padding: 4% 0;
+}
+
+#mobileH1 h1 {
+  margin-bottom: 0;
+}
+
+#aboutDescription h1, 
+#aboutDescription hr {
+  display: none;
+}
+
+#aboutImage img {
+  display: block;
+}
+
+#aboutImage,
+#aboutDescription {
+width: 100%;
+display: block;
+margin: 0;
+padding: 0;
+float: none;
+}
+
+#aboutImage {
+  margin-bottom: 3%;
+}
+
+#aboutImage img {
+  width: 100%;
+  position: static;
+  margin:0;
+  padding:0;
+  -webkit-transform: none; 
+  -moz-transform: none; 
+  -ms-transform: none; 
+  -o-transform: none; 
+  transform: none;
+}
+
+#aboutDescription p {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+#aboutDescription p:first-child {
+    padding-top: 4%;
+}
+
+#contact-area {
+  width: 80%;
+}
+
+#contact-area input, #contact-area textarea,
+#contact-area input.submit-button {
+  font-size: 1.1em;
+}
+
+#thankYou h4 { 
+  font-size: 4vw;
+}
+
+footer h4 {
+  font-size: 1.6vw;
+  letter-spacing: 2px;
+}
+
+}
+
+@media only screen and (max-width: 768px)  {
+  
+header .cd-primary-nav-trigger .cd-menu-icon {
+ right: 50%;
+}  
+
+#intro h2 {
+  top: -15px;
+}
+
+nav .cd-primary-nav a {
+  font-size: 7vw;
+}
+
+#featureTitle h1 {
+  font-size: 5.5vw;
+}
+
+#featureTitle button {
+  width: 50%;
+  font-size: 2vw;
+}
+
+#featureImage {
+  margin-bottom: 7%;
+  height: 60vh;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+.process-left {
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+.process-right {
+  width: 60%;
+}
+
+p {
+  width: 60%;
+}
+
+#secondaryNav {
+  margin-top: 7%;
+}
+
+.process-left img {
+  margin-left: 25%;
+  margin-top: 3%;
+  width: 50%;
+  position: static;
+  -webkit-transform: none; 
+  -moz-transform: none; 
+  -ms-transform: none; 
+  -o-transform: none; 
+  transform: none;
+}
+
+.before-and-after img {
+  width: 47%;
+}
+
+.before-and-after img:nth-child(2) {
+  margin: 0 2%;
+}
+
+.bnlm-flow figure figcaption,
+.iterative-design-gallery figure figcaption,
+.impact figcaption {
+  font-size: .85em;
+}
+
+/*------ CICTAN-BIOTECH ------ */
+.responsibility h3 {
+  font-size: 2.8vw;
+}
+
+.responsibility img {
+  width: 50%;
+  margin-top: 3.5%;
+}
+
+.specifications img {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.the-assets img {
+  width: 80%;
+  margin: 4% 10%;
+}
+
+#local-nav {
+  width: 58%;
+}
+
+#local-nav h3 {
+  font-size: 3.6vw;
+} 
+
+.arrow {
+  width: 4vw;
+  height: 4vw;
+}
+
+#secondaryNav p {
+  font-size: 2vw;
+}
+
+#sent {
+  height: 47vh;
+}
+
+/*------ Dr. He Spa ------ */
+
+.the-assets img.drHe-wire-frames {
+  width: 85%;
+  margin-left: 8.5%;
+}
+
+}
+
+
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+
+.parallax-one {
+  height: 100vh;
+  background-image: linear-gradient(rgba(1,8,13, 0.45), rgba(1,8,13, 0.45)), url(../images/background-mobile-horizontal.jpg); 
+  -webkit-background-size:cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+.home img {
+  left: 3%;
+}
+
+.title {
+  width: 52%;
+  padding-top: 40vh;
+}
+
+#intro h1 {
+  font-size: 6vw;
+}
+
+#intro h2 {
+  font-size:2.4vw;
+}
+
+#intro img {
+  margin-top: 9vw;
+  width: 7%;
+}
+
+#contact-area input.submit-button {
+  width: 70%;
+  margin-left: 15%;
+}
+
+#portfolio h1,
+#about h1,
+#contact h1  {
+  font-size: 7vw;
+  margin-bottom: 0;
+}
+
+#portfolioContainer > .grid h2 {
+  font-size: 5.5vw;
+  margin-bottom: 10%;
+}
+
+#portfolioContainer > .grid h3 {
+  font-size: 2.8vw;
+  top: 55%;
+}
+
+#about {
+  padding-top: 0;
+}
+
+#mobileH1 {
+  display: block;
+  padding: 4% 0;
+}
+
+#mobileH1 h1 {
+  margin-bottom: 0;
+}
+
+#aboutDescription h1, 
+#aboutDescription hr {
+  display: none;
+}
+
+#aboutImage,
+#aboutDescription {
+width: 100%;
+display: block;
+margin: 0;
+padding: 0;
+float: none;
+}
+
+#aboutImage {
+  margin-bottom: 3%;
+}
+
+#aboutImage img {
+  position: static;
+  margin:0;
+  padding:0;
+  -webkit-transform: none; 
+  -moz-transform: none; 
+  -ms-transform: none; 
+  -o-transform: none; 
+  transform: none;
+}
+
+#aboutDescription p {
+  width: 92%;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+#aboutDescription p:first-child {
+    padding-top: 4%;
+}
+
+#contact-area {
+  width: 90%;
+}
+
+#contact-area input, #contact-area textarea {
+  padding: 3%;
+}
+
+#featureImage {
+  height: 75vh;
+}
+
+#featureImage {
+  margin-bottom: 4%;
+}
+
+.case-study-intro img {
+  width: 70%;
+}
+
+.process-left img {
+  width: 65%;
+  margin-left: 17.5%;
+}
+
+p {
+  font-size: .95em;
+}
+
+#local-nav {
+  width: 46%;
+}
+
+#local-nav h3 {
+  font-size: 3vw;
+} 
+
+.arrow {
+  width: 3.5vw;
+  height: 3.5vw;
+}
+
+#secondaryNav p {
+  font-size: 1.9vw;
+}
+
+.js-left img {
+  width: 100%;
+}
+
+.js-right img {
+  width: 90.5%;
+}
+
+}
+
+@media only screen and (max-width: 650px) {
+
+
+#intro img {
+  margin-top: 25vw;
+  width: 6%;
+}
+
+#intro h2 {
+  top: -10px;
+}
+
+#portfolio h1,
+#about h1,
+#contact h1  {
+  font-size: 7vw;
+}
+
+#portfolioContainer .grid figure {
+  width: 100%;
+}
+
+#portfolioContainer > .grid h2 {
+  font-size: 6vw;
+}
+
+#portfolioContainer > .grid h3 {
+  font-size: 3.5vw;
+  top: 49.5%;
+}
+
+figcaption p {
+  display: none;
+}
+
+#contact .social-media {
+  width: 80%
+}
+
+.social-media-icons {
+  height: 45px;
+  width: 45px;
+}
+
+#contact-area {
+  width: 90%;
+}
+
+#contact-area input, #contact-area textarea,
+#contact-area input.submit-button {
+  font-size: 1.1em;
+}
+
+#contact-area input, #contact-area textarea {
+  padding: 3%;
+}
+
+#sent {
+  height: 53vh;
+}
+
+footer h4 {
+  font-size: 1.6vw;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: .95em;
+}
+
+#featureTitle h1 {
+  font-size: 6vw;
+}
+
+#featureTitle button {
+  font-size: 2.5vw;
+}
+
+.process-right {
+  width: 80%;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+p {
+  width: 80%;
+}
+
+.case-study-intro img {
+  width: 85%;
+}
+
+.process-left img {
+  margin-left: 15%;
+  width: 70%;
+}
+
+.process-right h3  {
+  font-size: 3.5vw;
+}
+
+.the-solution img {
+  width: 77%;
+}
+
+.js-left img {
+  width: 100%;
+}
+
+.js-right img {
+  width: 90.5%;
+}
+
+.bnlm-flow {
+  width: 95%
+}
+.bnlm-flow figure {
+  margin-left: 1.66666666667%;
+}
+
+.bnlm-flow figure figcaption, 
+.iterative-design-gallery figure figcaption,
+.impact figcaption {
+  font-size: 1em;
+}
+
+/*BBNLM iterative design examples split into two rows. */
+.iterative-design-gallery figure {
+  width: 45%;
+  margin-left: 3.33333333333%;
+  margin-right: 0;
+  display: inline-block;
+}
+
+.iterative-design figure:nth-child(3),
+.iterative-design figure:nth-child(4) {
+  margin-top: 6%;
+}
+
+#local-nav {
+  width: 60%;
+}
+
+#local-nav h3 {
+  font-size: 4.1vw;
+} 
+
+.arrow {
+  width: 4vw;
+  height: 4vw;
+}
+
+img.regis-parallax {
+  width: 84%;
+}
+
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+
+.parallax-one {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(1,8,13, 0.45), rgba(1,8,13, 0.45)), url(../images/background-mobile-horizontal.jpg); 
+  background-repeat: no-repeat; 
+}
+
+nav .cd-primary-nav a {
+  font-size: 7.5vw;
+}
+
+.title {
+  width: 40%;
+  padding-top: 22vh;
+}
+
+#intro h1 {
+  font-size: 7.9vw;
+}
+
+#intro h2 {
+  font-size:3.5vw;
+  top: -7px;
+}
+
+#intro img {
+  margin-top: 4vw;
+  width: 6%;
+}
+
+#portfolioContainer > .grid h2 {
+  font-size: 15.5vh;
+  top: 35%;
+}
+
+#portfolioContainer > .grid h3 {
+  font-size: 8vh;
+  top: 49%;
+}
+
+#about {
+  padding: 0;
+}
+
+#aboutImage img {
+  position: static;
+  margin:0;
+  padding:0;
+  -webkit-transform: none; 
+  -moz-transform: none; 
+  -ms-transform: none; 
+  -o-transform: none; 
+  transform: none;
+}
+
+#sent {
+  position: relative;
+  height: 60vh;
+}
+
+#aboutDescription > p {
+  margin: 0 auto;
+}
+
+.social-media-icons {
+  height: 40px;
+  width: 40px;
+}
+
+#contact-area {
+  width: 98%;
+}
+
+#featureImage {
+  position: relative;
+  height: 85vh;
+}
+
+p {
+  font-size: .9em;
+}
+
+#secondaryNav p {
+  font-size: 2.5vw;
+}
+
+.js-left img {
+  width: 100%;
+}
+
+.js-right img {
+  width: 90.5%;
+}
+
+/*------ CICTAN-BIOTECH ------ */
+.the-assets img {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.impact figure {
+  width: 48%;
+  margin-left: 1.33333333333%;
+}
+}
+
+@media only screen and (max-width: 414px) {
+
+.parallax-one {
+  height: 100vh;
+  background-image: linear-gradient(rgba(1,8,13, 0.45), rgba(1,8,13, 0.45)), url(../images/background-mobile-vertical.jpg); 
+  -webkit-background-size:cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat; 
+}
+
+.home img {
+  left: 3.5%;
+}
+
+nav .cd-primary-nav a {
+  font-size: 10vw;
+}
+
+.title {
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 30vh;
+  text-align: center;
+}
+
+#intro h1 {
+  width: 100%;
+  font-size: 12vw;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#intro h2 {
+  font-size:5.7vw;
+  top: -10px;
+  text-align: center;
+}
+
+#intro img {
+  margin-top: 8vw;
+  width: 10%;
+}
+
+#portfolio h1,
+#about h1,
+#contact h1  {
+  font-size: 8vw;
+  padding: 6% 0;
+}
+
+#portfolioContainer > .grid h2 {
+  font-size: 9vw;
+}
+
+#portfolioContainer > .grid h3 {
+  font-size: 5.5vw;
+  top: 52%;
+}
+
+.social-media-icons {
+  height: 40px;
+  width: 40px;
+}
+
+#contact-area {
+  width: 95%;
+}
+
+#contact-area input, #contact-area textarea,
+#contact-area input.submit-button {
+  font-size: 1em;
+  padding: 4% 0;
+}
+
+#contact-area input.submit-button {
+  width: 98%;
+  margin-left: 1%;
+  margin-bottom: 3%;
+}
+
+#thankYou h4 {
+  font-size: 6.5vw;
+}
+
+footer h4 {
+  font-size: 3vw;
+  letter-spacing: 2px;
+}
+
+#featureTitle h1 {
+  font-size: 7vw;
+}
+
+#featureTitle button {
+  width: 70%;
+  font-size: 4vw;
+}
+
+h2 {
+  font-size: 6.8vw;
+  margin: 3% 0;
+}
+
+p {
+  width: 95%;
+}
+
+.case-study-intro img {
+  width: 100%;
+}
+
+.process-left img,
+.the-solution img {
+  margin-left: 2%;
+  width: 96%;
+}
+
+.process-right {
+  width: 95%;
+}
+
+.process-right h3  {
+  font-size: 5vw;
+}
+
+hr.bnlm-hr, 
+.bnlm-flow {
+  display: none;
+}
+
+/*------ CICTAN-BIOTECH ------ */
+.responsibility h3 {
+  font-size: 4vw;
+}
+
+.responsibility img {
+  width: 70%;
+}
+
+.specifications img {
+  width: 90%; 
+  margin-left: 5%;
+}
+
+.the-assets img {
+  width: 100%;
+  margin: 0;
+}
+
+.impact figure {
+  float: none;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 2.5%;
+}
+
+#local-nav {
+  width: 80%;
+}
+
+#local-nav h3 {
+  font-size: 5.5vw;
+} 
+
+.arrow {
+  width: 5.8vw;
+  height: 5.8vw;
+}
+
+#secondaryNav p {
+  font-size: 3.2vw;
+}
+
+.js-left img {
+  width: 100%;
+}
+
+.js-right img {
+  width: 90.5%;
+}
+
+/*------ Dr. He Spa ------ */
+
+.the-assets img.drHe-wire-frames {
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+}
+
+/* iPhone 5s fix */
+@media only screen and (max-width: 320px) and (max-height: 568px) {
+#container > div.parallax-one {
+  height: 568px;
+  width: 320px;
+  overflow: hidden; 
+  position: static; 
+ /* background-size: 320px 568px;*/
+}
+}
+
+@media only screen and (max-width: 320px) {
+.title {
+  width: 100%;
+  padding-top: 30vh;
+}
+
+#intro h1 {
+  width: 100%;
+  font-size: 10.5vw;
+  text-align: center;
+}
+
+#intro h2 {
+  font-size:5.5vw;
+  top: -5px;
+}
+
+#intro img {
+  width: 11%;
+}
+
+#sent {
+  height: 60vh;
+}
+
+#featureTitle {
+  width: 90%;
+}
+
+#featureImage {
+  height: 65vh;
+}
+
+.process-left img,
+.the-solution img {
+  margin-left: .5%;
+  width: 99%;
+}
+
+/*------ Jason Cunningham ------ */
+.process-right h3 {
+  font-size: 6vw;
+}
+
+/*------ CICTAN-BIOTECH ------ */
+.responsibility h3 {
+  font-size: 4.6vw;
+}
+
+.responsibility img {
+  width: 80%;
+}
+
+.specifications img {
+  width: 100%;
+  margin: 0;
+}
+
+#secondaryNav {
+  margin-top: 10%;
+}
+
+#local-nav {
+  width: 92%;
+}
+
+#local-nav h3 {
+  font-size: 6vw;
+} 
+
+.arrow {
+  width: 7.5vw;
+  height: 7.5vw;
+}
+
+#secondaryNav p {
+  font-size: 4vw;
+}
+}
+
+
